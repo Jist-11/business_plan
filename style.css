@@ -188,7 +188,6 @@ body {
     background-color: rgba(42, 42, 42, 0.9); /* mid-gray with opacity */
     padding-top: 16px; /* Equivalent to py-4 */
     padding-bottom: 16px; /* Equivalent to py-4 */
-    display: none; /* Toggled by JS */
 }
 
 .navbar__links-mobile-content {
@@ -645,6 +644,19 @@ body {
 .testimonials-section__author--blue {
     color: var(--neon-blue);
 }
+.testimonial {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.testimonial p {
+  font-size: 16px; /* smaller on mobile if you want */
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
 
 .testimonial-dots {
     display: flex;
@@ -949,4 +961,22 @@ body {
     .contact-section {
         margin: 40px 80px; /* Equivalent to lg:mx-20 my-10 */
     }
+}
+.trusted-by-section__logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 24px;
+}
+
+.trusted-by-section__logo {
+  max-width: 100px; /* Limit size on mobile */
+  width: 100%;
+  height: auto;
+  margin: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.trusted-by-section__logo:hover {
+  filter: grayscale(0%);
 }
